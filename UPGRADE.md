@@ -10,7 +10,13 @@
 
 今天是 {{ date.DATA }}
 
-今天天气：{{weather.DATA }}
+天气 {{ weather.DATA}}
+
+今天温度：{{ lowest.DATA }}度 - {{ highest.DATA }}度
+
+明日天气：{{ wea_tomo.DATA}}
+
+明日温度：{{ lowest_tomo.DATA }}度 - {{ highest_tomo.DATA }}度
 
 当前温度：{{ temperature.DATA }}
 
