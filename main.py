@@ -1,7 +1,5 @@
 from datetime import date, datetime
 import math
-from urllib.parse import uses_relative
-from winreg import REG_NOTIFY_CHANGE_SECURITY
 from wechatpy import WeChatClient
 from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
