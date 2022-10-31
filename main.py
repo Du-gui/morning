@@ -5,6 +5,7 @@ from wechatpy.client.api import WeChatMessage, WeChatTemplate
 import requests
 import os
 import random
+import json
 
 today = datetime.now()
 tody = datetime.now().strftime('%Y-%m-%d')
@@ -65,5 +66,13 @@ count = 0
 for user_id in user_ids:
   res = wm.send_template(user_id, template_id, data)
   count+=1
+
+token = 'f67c8f1c4f7045b2a181d610966d599b' #在pushpush网站中可以找到
+title= '今日早报' #改成你要的标题内容
+content ='内容' #改成你要的正文内容
+url = 'http://www.pushplus.plus/send'
+body=json.dumps(data).encode(encoding='utf-8')
+headers = {'Content-Type':'application/json'}
+requests.post(url,data=body,headers=headers)
 
 print("发送了" + str(count) + "条消息")
